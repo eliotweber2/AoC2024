@@ -22,7 +22,7 @@ function parse(str) {
   const examples = str.split('\n\n');
   const lst = [];
   for (let example of examples) {
-    pairs = example.split('\n').map(line => line.match(/\d+/g));
+    const pairs = example.split('\n').map(line => line.match(/\d+/g));
     const buttonA = pairs[0].map(n => parseInt(n));
     const buttonB = pairs[1].map(n => parseInt(n));
     const prize = pairs[2].map(n => parseInt(n));
